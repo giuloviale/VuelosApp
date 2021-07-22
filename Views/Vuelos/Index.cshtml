@@ -1,0 +1,60 @@
+﻿@model IEnumerable<SistemaWebVuelos.Models.Vuelo>
+<div class="container-fluid my-4">
+    <div class="text-center">
+        <button type="button" class="btn btn-info  my-4">
+            <a class="text-light" @Html.ActionLink("Crear Vuelo", "Create")</a>
+        </button>
+        <div class="d-flex justify-content-center">
+            <table class="table  my-4">
+                <thead>
+                    <tr>
+                        <th scope="col">@Html.DisplayNameFor(model => model.VueloID)</th>
+                        <th scope="col">@Html.DisplayNameFor(model => model.Fecha)</th>
+                        <th scope="col">@Html.DisplayNameFor(model => model.Destino)</th>
+                        <th scope="col">@Html.DisplayNameFor(model => model.Origen)</th>
+                        <th scope="col">@Html.DisplayNameFor(model => model.MatriculaAvion)</th>
+                        <th colspan="2"> <p>Acciones</p> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.VueloID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Fecha)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Destino)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Origen)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MatriculaAvion)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Detalles", "Detail", new { id = item.VueloID })
+                        </td>
+                        <td>
+                            @Html.ActionLink("Eliminar", "Delete", new { id = item.VueloID })
+                        </td>
+                        <td>
+                            @Html.ActionLink("Editar", "Edit", new { id = item.VueloID })
+                        </td>
+                        <td>
+                            @Html.ActionLink("Destino", "TraerPorDestino", new { destino= item.Destino })
+                        </td>
+
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

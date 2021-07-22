@@ -1,0 +1,46 @@
+﻿#header {
+    background-color: saddlebrown;
+    color: white;
+    /*padding: 1px;*/
+    height: 80px
+}
+
+.titulo {
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+#tnav {
+    text-decoration: none;
+    color: white;
+}
+
+#content {
+    //float: left;
+  
+}
+
+#sideBar {
+    float: right;
+    margin: 10px;
+    border: dotted 3px blue;
+    width: 180px;
+}
+
+table {
+    text-align: center;
+    /*margin-left:40px;*/
+}
+
+
+#footer {
+    text-align: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    clear: both;
+    background-color: sandybrown;
+    color: white;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}

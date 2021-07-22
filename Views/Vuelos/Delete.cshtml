@@ -1,0 +1,63 @@
+﻿@model SistemaWebVuelos.Models.Vuelo
+
+<div class="text-center mt-3">
+    <h3>¿Deseas eliminar el siguiente vuelo?</h3>
+    <div class="mt-3">
+        <h4>Vuelo</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.VueloID)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.VueloID)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Fecha)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Destino)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Destino)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Origen)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Origen)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MatriculaAvion)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MatriculaAvion)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions">
+                <button type="submit" value="Delete" class="btn btn-info text-light"> Eliminar </button>
+
+            </div>
+        }
+        <button type="button" class="btn btn-info  my-4">
+            <a class="text-light" @Html.ActionLink("Volver al Index", "Index")</a>
+        </button>
+    </div>
+</div>
